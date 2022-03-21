@@ -1,0 +1,39 @@
+body{
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#wrapper {
+    margin: 20px;
+    padding: 25px;
+    border: solid black 2px;
+    border-radius: 30px;
+    background-color: blanchedalmond;
+}
+
+#form_contain {
+    display: flex;
+    
+}
+
+form{
+    background-color: darkgray;
+    padding: 6px;
+    border-radius: 6px;
+    border: solid black 2px;
+    font-size: larger;
+}
+
+#container {
+    margin-top: 15px;
+    padding: 6px;
+    border-radius: 6px;
+    border: solid black 2px;
+    background-color: darkgray;
+}
+
+#head_wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
