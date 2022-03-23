@@ -9,14 +9,14 @@ let selectTheElement = (selectElement) => {
 //key up funktion
 function onKeyUp() {
     console.log(this.value);
+    let foundStudent = DATABASE.students
+        .filter((student) => student.lastName.includes(input.value))
+    console.log(foundStudent)
 }
 let input = document.querySelector("input");
 input.addEventListener("keyup", onKeyUp);
 
 //Söka på efternamnen med input.value 
-
-let foundStudent = DATABASE.students
-    .filter((student) => student.lastName.includes(input.value))
 
 
 //Rendera och lägger in HTML element 
