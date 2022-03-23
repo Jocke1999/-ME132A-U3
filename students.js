@@ -1,11 +1,5 @@
 "use strict";
 
-//Element 
-
-let selectTheElement = (selectElement) => {
-    return document.querySelector(selectElement);
-}
-
 //En wrapper som ska framställa resultaten
 
 let results_wrapper = document.getElementById("#results_wrapper")
@@ -25,8 +19,7 @@ function onKeyUp() {
 //Söka på efternamnen med input.value 
 
 let input = document.querySelector("input");
-input.addEventListener("keyup", onKeyUp)
-    ;
+input.addEventListener("keyup", onKeyUp);
 
 //Rendera och lägger in HTML element 
 
