@@ -6,18 +6,27 @@ let selectTheElement = (selectElement) => {
     return document.querySelector(selectElement);
 }
 
-//key up funktion
+//En wrapper som ska framställa resultaten
+
+let results_wrapper = document.getElementById("#results_wrapper")
+
+
+//Key up funktion
+
 function onKeyUp() {
     console.log(this.value);
     let foundStudent = DATABASE.students
-        .filter((student) => student.lastName.includes(input.value))
+        .filter((student) => student.lastName.toLowerCase().includes(input.value))
     console.log(foundStudent)
+    document.querySelector("#results_wrapper").innerHTML = "";
+    renderStudents(DATABASE);
 }
-let input = document.querySelector("input");
-input.addEventListener("keyup", onKeyUp);
 
 //Söka på efternamnen med input.value 
 
+let input = document.querySelector("input");
+input.addEventListener("keyup", onKeyUp)
+    ;
 
 //Rendera och lägger in HTML element 
 
@@ -34,5 +43,3 @@ function renderStudents(data) {
         document.querySelector("#wrapper").appendChild(elementStudent);
     }
 }
-//Direkt kod
-renderStudents(DATABASE);
