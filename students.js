@@ -1,38 +1,36 @@
-"use strict";
+//Bestämmer att "inputStudent" ska sparas utifrån "student-search " i HTML
+let inputStudent = document.getElementById('student-search');
 
-//En wrapper som ska framställa resultaten
-
-let results_wrapper = document.getElementById("#results_wrapper")
-
-
-//Key up funktion
-
-function onKeyUp() {
-    console.log(this.value);
-    let foundStudent = DATABASE.students
-        .filter((student) => student.lastName.toLowerCase().includes(input.value))
-    console.log(foundStudent)
-    document.querySelector("#results_wrapper").innerHTML = "";
-    renderStudents(DATABASE);
+//Skapar en funktion där man ska hitta studenterna utfrån deras efternamn och även med små bokstäver 
+function findStudents () {
+    let student = DATABASE.students
+    .filter(student => student.lastName.toLowerCase().includes(inputStudent.value))
+    .map(student => student.firstName + ' ' + student.lastName + " (total: " + + " credits");
+    return student;
 }
 
-//Söka på efternamnen med input.value 
+//Skapar en "tryck" funktion där keyUp visar alla studenter. 
+inputStudent.addEventListener('keyup' , function () {
+    let foundStudent = findStudents ();
+    document.getElementById("results").innerHTML = "";
+    createElement(foundStudent);
+//Om "input fältet" är tomt ska det inte visas några element från HTML
+    if (inputStudent.value == ""){
+        document.getElementById("results").innerHTML = "";
+    }
+});
 
-let input = document.querySelector("input");
-input.addEventListener("keyup", onKeyUp);
+//Renderar(framkallar) alla studenter  
+function renderStudent (student) {
+    let results = document.getElementById("results");
+    let div = document.createElement("div");
 
-//Rendera och lägger in HTML element 
-
-function renderStudents(data) {
-
-    for (let i = 0; i < data.students.length; i++) {
-        let elementStudent = document.createElement("div")
-        elementStudent.innerHTML = `
-            <div id="container">
-                <h2>${data.students[i].firstName} ${data.students[i].lastName} (total: ${data.students[i].courses.passedCredits} )</h2>
-                <p> Courses: </p>
-            </div>
-             `;
-        document.querySelector("#wrapper").appendChild(elementStudent);
+    div.innerHTML = student;
+    results.appendChild(div);
+}
+//Skapar student elementen 
+function createElement (students) {
+    for (let student of students){
+        renderStudent(student);
     }
 }
