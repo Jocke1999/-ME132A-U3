@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="students.css">
-    <title>U3
-    </title>
-</head>
-<body>
-  <div id="wrapper">
-      <h1>Search students by lastname!</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="students.css" />
+    <title>U3</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Search for a student</h1>
       <div id="form">
-          <label for="student-search">Search here:</label>
-              <input type="search" id= "student-search"/> 
-              <div id="results"></div>
+        <form>
+          Search by student by last name:
+          <input type="text" id="students-search" />
+        </form>
+        <p id="p2">Reset with key button "Enter"</p>
       </div>
-      </div>
-  </div>
+
+      <div id="result"></div>
+    </div>
     <script src="database.js"></script>
     <script src="students.js"></script>
-</body>
+  </body>
 </html>
