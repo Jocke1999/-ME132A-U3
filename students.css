@@ -16,19 +16,29 @@ body {
   border-radius: 30px;
 }
 
-#result {
-  display: grid;
-  border: solid black 0.5px;
+#result > #result {
+  border: solid black 1px;
+  border-radius: 20px;
+  padding: 6px;
+  background-color: lightgrey;
 }
 
 .done {
+  border: black 1px solid;
   border-radius: 7px;
   background-color: lightgreen;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
 }
 
 .notdone {
+  border: black 1px solid;
   border-radius: 7px;
   background-color: lightcoral;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
 }
 
 #resetButton {
@@ -50,5 +60,6 @@ header {
 }
 
 h3 {
-  padding: 10px;
+  margin: 7px;
+  padding-left: 10px;
 }
