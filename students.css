@@ -12,21 +12,43 @@ body {
   background-color: blanchedalmond;
 }
 
-#search {
-  background-color: darkgray;
-  padding: 6px;
-  border-radius: 30px;
-  border: solid black 2px;
-  font-size: larger;
-}
-
-label {
-  background-color: lightblue;
-  padding: 2px;
-  border-radius: 30px;
-  font-size: smaller;
-}
-
 #student-search {
   border-radius: 30px;
+}
+
+#result {
+  display: grid;
+  border: solid black 0.5px;
+}
+
+.done {
+  border-radius: 7px;
+  background-color: lightgreen;
+}
+
+.notdone {
+  border-radius: 7px;
+  background-color: lightcoral;
+}
+
+#resetButton {
+  font-family: monospace;
+  font-style: oblique;
+}
+
+header {
+  font-family: monospace;
+  font-size: larger;
+  margin: 10px;
+}
+
+#courses {
+  margin: 7px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+h3 {
+  padding: 10px;
 }
