@@ -35,7 +35,7 @@ body {
 .notdone {
   border: black 1px solid;
   border-radius: 7px;
-  background-color: lightcoral;
+  background-color: white;
   display: grid;
   place-items: center;
   font-size: 14px;
@@ -62,4 +62,8 @@ header {
 h3 {
   margin: 7px;
   padding-left: 10px;
+}
+
+h4 {
+  margin-bottom: 10px;
 }
