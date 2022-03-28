@@ -12,10 +12,6 @@ body {
   background-color: blanchedalmond;
 }
 
-#results {
-  display: flex;
-}
-
 #search {
   background-color: darkgray;
   padding: 6px;
