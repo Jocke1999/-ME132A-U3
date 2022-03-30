@@ -1,5 +1,7 @@
+//globala variablar
 let courses = DATABASE.courses;
 
+// skapar ett id "result" som innehåller titel och totala credits 
 function renderCourse(id) {
     let div = document.createElement("div");
     let courses = DATABASE.courses[id];
@@ -45,6 +47,7 @@ let responsibleBox = []
     return responsibleBox.toString().split(",").join(""); 
 }     
 
+// skapat en loop där man hittar alla lärare
 function findTeachers(courses) {
     let teacherBox = [];
     for (let i = 0; i < DATABASE.teachers.length; i++) {
@@ -62,7 +65,7 @@ function findTeachers(courses) {
     }
     return teacherBox.toString().split(",").join("");
 } 
-
+// skapat en loop där man hittar alla elever
  function findStudents(courses) {
     let studentBox = [];
     for (let i = 0; i < DATABASE.students.length; i++) {
@@ -83,15 +86,16 @@ function findTeachers(courses) {
     return studentBox.toString().split(",").join("");
 } 
 
-
+// toLowerCase för att användningen av små samt stora bokstäver ska kunna skrivas ( skrivs flera gånger i koden)
 function searchCourse() {
     return input.value.toLowerCase();
 }
 
 let input = document.getElementById("course-search");
-
+//skapar en keyUp funktion för att användaren ska kunna integrera med sökfältet
 input.addEventListener("keyup", courseSearch);
 
+//renderar/framkallar kursen utifrån att man sökt i sökfältet
 function courseSearch() {
     let coursesArray = []
     for (let i = 0; i < courses.length; i++){

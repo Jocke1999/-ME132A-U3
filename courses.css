@@ -53,6 +53,8 @@ header {
   text-align: center;
   margin: 30px;
   border: solid black 2px;
+  border-radius: 7px;
+  padding: 10px;
 }
 
 #students {

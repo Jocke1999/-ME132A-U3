@@ -82,7 +82,7 @@ function searchLastName() {
 
 let input = document.getElementById("students-search");
 input.addEventListener("keyup", studentLastName);
-
+//renderar/framkallar studenterna utifrån att man sökt i sökfältet på deras efternamn
 function studentLastName (){
     let studentsArray = []
     for ( let i = 0; i < students.length; i++){
@@ -111,6 +111,7 @@ function submit () {
 
 input.addEventListener("submit", submit);
 
+//Skapar en dark/light mode funktion där "knappen/button" skapas till en eventListener 
 function darkMode() {
     var element = document.body;
     const darkMode = localStorage.getItem("darkMode")
@@ -129,5 +130,5 @@ function darkMode() {
 const btn = document.querySelector('.btn')
 btn.addEventListener('click', darkMode);
 
-
+//direkt kod
 showStudents(DATABASE.students);
