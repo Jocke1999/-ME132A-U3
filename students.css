@@ -12,11 +12,12 @@ body {
   background-color: blanchedalmond;
 }
 
-#student-search {
+#students-search {
   border-radius: 30px;
 }
 
 #result > #result {
+  margin-top: 20px;
   border: solid black 1px;
   border-radius: 20px;
   padding: 6px;
@@ -50,6 +51,7 @@ header {
   font-family: monospace;
   font-size: larger;
   margin: 10px;
+  text-decoration-line: underline;
 }
 
 #courses {
@@ -66,4 +68,9 @@ h3 {
 
 h4 {
   margin-bottom: 10px;
+}
+
+.darkMode {
+  filter: invert(1) hue-rotate(28deg);
+  background-color: black;
 }

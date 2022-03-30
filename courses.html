@@ -1,41 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="courses.css">
-    <title>U3
-    </title>
-</head>
-<body>
-  <div id="wrapper">
-      <div id="form_contain">
-          <form> Search Courses by title!
-              <input type="text">
-          </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="courses.css" />
+    <title>U3 Kurserna</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Course searching!</h1>
+      <div id="form">
+        <form>
+          Search on courses:
+          <input type="text" id="course-search" />
+        </form>
+        <p id="resetButton">Reset with key button "Enter"</p>
+        <button class="btn">Dark or Light</button>
       </div>
-      <div id="container">
-          <header>Architecture of Classic Greece (7.5 credits)</header>
-          <div id="head_wrap">
-              <div id="course">
-                  <h3>Courses:</h3>
-                  <div id="courses">
-                      <div>
-                          <h4>History of the Romantic Age </h4>
-                          <p>Autumn 2014 (2 of 5 credits)</p>
-                        </div>
-                        <div class="done">
-                            <h4>Art of the Romantic</h4>
-                            <p>Autumn 2014 (5 of 5 credits)</p>
-                        </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+
+      <div id="result"></div>
+    </div>
+
     <script src="database.js"></script>
     <script src="courses.js"></script>
-    <script src="main.js"></script>
-</body>
+  </body>
 </html>

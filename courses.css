@@ -1,39 +1,97 @@
-body{
-    margin: 0px;
-    font-family: 'Times New Roman', Times, serif;
+body {
+  margin: 0px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: lightgoldenrodyellow;
 }
 
 #wrapper {
-    margin: 20px;
-    padding: 25px;
-    border: solid black 2px;
-    border-radius: 30px;
-    background-color: blanchedalmond;
+  margin: 20px;
+  padding: 25px;
+  border: solid black 2px;
+  border-radius: 30px;
+  background-color: blanchedalmond;
 }
 
-#form_contain {
-    display: flex;
-    
+#course-search {
+  border-radius: 30px;
 }
 
-form{
-    background-color: darkgray;
-    padding: 6px;
-    border-radius: 6px;
-    border: solid black 2px;
-    font-size: larger;
+#result > div {
+  margin-top: 20px;
+  border: solid black 1px;
+  border-radius: 20px;
+  padding: 6px;
+  background-color: lightgrey;
 }
 
-#container {
-    margin-top: 15px;
-    padding: 6px;
-    border-radius: 6px;
-    border: solid black 2px;
-    background-color: darkgray;
+.done {
+  border: black 1px solid;
+  border-radius: 7px;
+  background-color: lightgreen;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
 }
 
-#head_wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.notdone {
+  border: black 1px solid;
+  border-radius: 7px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
 }
 
+#resetButton {
+  font-family: monospace;
+  font-style: oblique;
+}
+
+header {
+  font-family: monospace;
+  font-size: larger;
+  text-align: center;
+  margin: 30px;
+  border: solid black 2px;
+}
+
+#students {
+  margin: 7px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+h3 {
+  margin: 7px;
+  padding-left: 10px;
+}
+
+h4 {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+#responsibleteacher {
+  background-color: lightcoral;
+  border-radius: 7px;
+  border: black solid 1px;
+}
+
+#teachers {
+  border: black solid 2px;
+  background-color: white;
+}
+
+#findteachers {
+  margin: 20px;
+}
+
+u {
+  font-size: 15px;
+}
+
+.darkMode {
+  filter: invert(1) hue-rotate(28deg);
+  background-color: black;
+}

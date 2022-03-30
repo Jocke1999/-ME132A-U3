@@ -1,6 +1,7 @@
- 
+//globala variablar
 let students = DATABASE.students;
 
+// skapar ett id "result" som innehåller elevens för och efternamn och totala credits
 function renderStudent(id) {
     let div = document.createElement("div");
     let student = DATABASE.students[id];
@@ -19,6 +20,7 @@ function renderStudent(id) {
     return div;
 }
 
+// tar reda på varje students totala credits
 function totalCredits(student) {
     let credits = []
     for (let course of student.courses) {
@@ -39,6 +41,8 @@ function showStudents (students) {
         studentsElement.appendChild(studentElement);
     }
 }
+
+// funktion och loop som skapar div element för studenter
 function renderCourses (student){
     let courseData = DATABASE.courses;
     let courses = [];
@@ -51,7 +55,7 @@ function renderCourses (student){
    for (let i = 0; i < courses.length; i++) {
        let div = document.createElement("div");
 
-        
+       
        if (student.courses[i].passedCredits == courseData[courses[i].courseId].totalCredits) {
            let text = div.innerHTML = 
            `<div class="done"><h4>${courses[i].title}</h4>
@@ -69,6 +73,8 @@ function renderCourses (student){
 
    return courseDiv.toString().split(",").join("");
 }
+
+
 
 function searchLastName() {
     return input.value.toLowerCase();
@@ -104,6 +110,24 @@ function submit () {
 }
 
 input.addEventListener("submit", submit);
+
+function darkMode() {
+    var element = document.body;
+    const darkMode = localStorage.getItem("darkMode")
+    element.classList.toggle("darkMode");
+
+    if (JSON.parse(darkMode) == true) {
+        element.classList.remove("darkMode");
+        localStorage.setItem("darkMode", JSON.stringify(false));
+    } 
+    else if (JSON.parse(darkMode) == false) {
+        element.classList.add("darkMode");
+        localStorage.setItem("darkMode", JSON.stringify(true));
+    }
+}
+
+const btn = document.querySelector('.btn')
+btn.addEventListener('click', darkMode);
 
 
 showStudents(DATABASE.students);
